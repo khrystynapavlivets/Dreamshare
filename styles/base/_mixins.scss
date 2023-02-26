@@ -1,0 +1,12 @@
+@mixin fond($family,$style, $weight, $size, $height) {
+    font-family: $family;
+    font-style: $style;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+}
+@mixin flexbox($flexbox,$main-axis, $cross-axis) {
+   display: $flexbox;
+   justify-content: $main-axis;
+   align-items: $cross-axis;
+}

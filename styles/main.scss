@@ -1,0 +1,1484 @@
+@import "./base/mixins";
+@import "./base/variables";
+@import "./base/reset";
+@import "./base/fonts";
+
+.header {
+  max-width: 1440px;
+  height: 700px;
+  background-image: url(../images/Background.png);
+  background-size: cover;
+  padding-top: 40px;
+  padding-bottom: 224px;
+  background-position: center;
+
+  &-wrapper {
+    height: 36px;
+    margin: 0px 291px 147.5px 248px;
+    width: 62.569vw;
+    @include flexbox(flex, space-between, center);
+    &-dreamshare {
+      @extend %text_display;
+      @include fond("Montserrat-bold", normal, 700, 20px, 24px);
+    }
+
+    &-button {
+      @include flexbox(flex, normal, center);
+      &-login,
+      &-singup {
+        @extend %text_display;
+        @include fond("Montserrat-light", normal, 400, 14px, 17px);
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+
+      &-singup {
+        border: 2px solid #ffffff;
+        border-radius: 40px;
+        padding: 8px 15px 7px 16px;
+        margin-left: 20px;
+      }
+    }
+  }
+
+  &-center {
+    @include flexbox(flex, center, center);
+    flex-direction: column;
+    margin-top: 147.5px;
+
+    &-topic {
+      width: 483px;
+      height: 126px;
+      @extend %text_display;
+      @include fond("Montserrat-bold", normal, 700, 52px, 63px);
+      text-align: center;
+    }
+
+    &-text {
+      @include fond("Roboto-Light", normal, 300, 24px, 24px);
+      @include flexbox(flex, normal, flex-end);
+      text-align: center;
+      color: #f7f3f2;
+      margin: 28.5px 0px 33px;
+    }
+
+    &-button {
+      @include fond("Montserrat-bold", normal, 700, 14px, 17px);
+      padding: 12px 18.5px 11px 19.5px;
+      margin: 0 auto;
+      background: #ff4e50;
+      border-radius: 40px;
+      border: 0;
+      @include flexbox(flex, normal, flex-end);
+      text-align: center;
+      color: #ffffff;
+    }
+  }
+}
+
+main {
+  width: 940px;
+  margin: 0px auto 100px;
+
+  section {
+    @include flexbox(flex, normal, center);
+    flex-direction: column;
+
+    .carts_header {
+      @include fond("Montserrat-bold", normal, 700, 26px, 32px);
+      padding: 89px 0 35px;
+      @include flexbox(flex, normal, flex-end);
+      text-align: center;
+      color: #444444;
+      margin: 0 auto;
+    }
+
+    .carts {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 400px;
+      gap: 0px 20px;
+      position: relative;
+
+      &-step {
+        border-radius: 4px;
+      }
+
+      &-step-button {
+        @include fond("Montserrat-Regular", normal, 400, 10px, 12px);
+        width: 70px;
+        height: 20px;
+        @include flexbox(flex, center, center);
+        letter-spacing: 2px;
+        color: #ffffff;
+        background: #ff4e50;
+        border-radius: 40px;
+        border: none;
+      }
+
+      &-step-header {
+        @include fond("Montserrat-bold", normal, 700, 24px, 26px);
+        @include flexbox(flex, normal, flex-end);
+        color: #ffffff;
+      }
+
+      &-step-text {
+        @include fond("Roboto-Light", normal, 300, 14px, 14px);
+        @include flexbox(flex, normal, flex-end);
+        color: #e3e3e3;
+      }
+
+      &-step_1 {
+        position: relative;
+
+        &-button-1 {
+          position: absolute;
+          left: 25px;
+          top: 219px;
+        }
+
+        &-header {
+          position: absolute;
+          width: 250px;
+          height: 58px;
+          left: 25px;
+          top: 254px;
+        }
+
+        &-text {
+          position: absolute;
+          width: 250px;
+          height: 57px;
+          left: 25px;
+          top: 322px;
+        }
+      }
+
+      &-step_2 {
+        position: relative;
+
+        &-button-2 {
+          position: absolute;
+          left: 25px;
+          top: 250px;
+        }
+
+        &-header {
+          position: absolute;
+          width: 250px;
+          height: 29px;
+          left: 25px;
+          top: 290px;
+        }
+
+        &-text {
+          position: absolute;
+          width: 250px;
+          height: 57px;
+          left: 25px;
+          top: 322px;
+        }
+      }
+
+      &-step_3 {
+        position: relative;
+
+        &-button-3 {
+          position: absolute;
+          left: 25px;
+          top: 219px;
+        }
+
+        &-header {
+          position: absolute;
+          width: 196px;
+          height: 58px;
+          left: 25px;
+          top: 254px;
+        }
+
+        &-text {
+          position: absolute;
+          width: 250px;
+          height: 57px;
+          left: 25px;
+          top: 322px;
+        }
+      }
+    }
+  }
+
+  section {
+    .header-partner {
+      @include fond("Montserrat-bold", normal, 700, 26px, 32px);
+      @include flexbox(flex, normal, flex-end);
+      text-align: center;
+      color: #444444;
+      margin: 89px 0 35px;
+    }
+
+    .block {
+      display: grid;
+      grid-template-columns: 221px 221px 221px 221px;
+      grid-template-rows: 224px;
+      gap: 0px 19px;
+
+      &-partners {
+        width: 221px;
+        height: 224px;
+        position: relative;
+
+        &-img {
+          border-radius: 50%;
+          @include flexbox(flex, center, normal);
+          margin: 0 auto;
+        }
+
+        &-name {
+          @include fond("Montserrat-bold", normal, 700, 14px, 17px);
+          width: 221px;
+          height: 18px;
+          @include flexbox(flex, center, flex-end);
+          text-align: center;
+          color: #444444;
+          margin: 17px 0 12px;
+        }
+
+        &-text {
+          @include fond("Roboto-Light", normal, 300, 14px, 14px);
+          width: 221px;
+          height: 38px;
+          @include flexbox(flex, normal, flex-end);
+          text-align: center;
+          color: #666666;
+        }
+
+        &-text_3,
+        &-text_4 {
+          width: 221px;
+          height: 57px;
+        }
+      }
+
+      &-partners_1 {
+        &::before {
+          content: "\ea4f";
+          @include fond(unicons-line, normal, 400, auto, auto);
+          position: absolute;
+          right: 45px;
+          bottom: 100px;
+          background: #ff4e50;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          border: 4px solid white;
+          padding: 8px;
+          color: white;
+        }
+      }
+
+      &-partners_2 {
+        &::before {
+          content: "\e98e";
+          @include fond(unicons-line, normal, 400, auto, auto);
+          position: absolute;
+          right: 45px;
+          bottom: 100px;
+          background: #19d4ca;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          border: 4px solid white;
+          padding: 8px;
+          color: white;
+        }
+      }
+
+      &-partners_3 {
+        &::before {
+          content: "\ea3d";
+          @include fond(unicons-line, normal, 400, auto, auto);
+          position: absolute;
+          right: 45px;
+          bottom: 100px;
+          background: #ffa710;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          border: 4px solid white;
+          padding: 8px;
+          color: white;
+        }
+      }
+
+      &-partners_4 {
+        &::before {
+          content: "\eadb";
+          @include fond(unicons-line, normal, 400, auto, auto);
+          position: absolute;
+          right: 45px;
+          bottom: 100px;
+          background: rgb(142, 48, 214);
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          border: 4px solid white;
+          padding: 8px;
+          color: white;
+        }
+      }
+    }
+
+    .button-partners {
+      @include fond("Montserrat-bold", normal, 700, 14px, 17px);
+      width: 180px;
+      height: 40px;
+      background: #ffffff;
+      border: 2px solid #ff4e50;
+      border-radius: 40px;
+      align-items: flex-end;
+      color: #ff4e50;
+      margin: 36px auto 89px;
+    }
+  }
+
+  section {
+    .header-ideas {
+      @include fond("Montserrat-bold", normal, 700, 26px, 32px);
+      display: flex;
+      align-items: flex-end;
+      text-align: center;
+      color: #444444;
+      margin-bottom: 35px;
+    }
+
+    .ideas {
+      display: grid;
+      grid-template-columns: 300px 300px 300px;
+      grid-template-rows: 310px 310px 310px;
+      gap: 20px 20px;
+      position: relative;
+
+      &-block {
+        border-radius: 4px;
+
+        &-img {
+          border-radius: 4px;
+        }
+
+        &_sport {
+          position: relative;
+
+          &-text {
+            position: absolute;
+            left: 46px;
+            top: 142px;
+          }
+        }
+
+        &_health {
+          position: relative;
+
+          &-text {
+            position: absolute;
+            left: 31px;
+            top: 142px;
+          }
+        }
+
+        &_extreme {
+          position: relative;
+
+          &-text {
+            position: absolute;
+            width: 187px;
+            height: 54px;
+            left: 57px;
+            top: 128px;
+          }
+        }
+
+        &_games {
+          position: relative;
+
+          &-text {
+            position: absolute;
+            left: 110px;
+            top: 142px;
+          }
+        }
+
+        &_culture {
+          grid-column-start: 2;
+          grid-column-end: 3;
+          grid-row-start: 2;
+          grid-row-end: 2;
+          position: relative;
+
+          &-text {
+            position: absolute;
+            width: 261px;
+            height: 27px;
+            left: 180px;
+            top: 142px;
+          }
+        }
+
+        &_enjomet {
+          grid-column-start: 1;
+          grid-column-end: 2;
+          grid-row-start: 3;
+          grid-row-end: 3;
+          position: relative;
+
+          &-text {
+            position: absolute;
+            width: 277px;
+            height: 27px;
+            left: 172px;
+            top: 142px;
+          }
+        }
+
+        &_trevelling {
+          grid-column-start: 3;
+          grid-column-end: 3;
+          grid-row-start: 3;
+          grid-row-end: 3;
+          position: relative;
+
+          &-text {
+            position: absolute;
+            left: 92.5px;
+            top: 142px;
+          }
+        }
+
+        &-text {
+          @include fond("Montserrat-bold", normal, 700, 22px, 27px);
+          display: flex;
+          align-items: flex-end;
+          text-align: center;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  section {
+    .header-form {
+      @include fond("Montserrat-bold", normal, 700, 26px, 32px);
+      display: flex;
+      align-items: flex-end;
+      text-align: center;
+      color: #444444;
+      margin: 89px auto 53px;
+    }
+
+    .text-form {
+      @include fond("Roboto-Light", normal, 300, 18px, 14px);
+      display: flex;
+      align-items: flex-end;
+      text-align: center;
+      color: #666666;
+      margin-bottom: 25px;
+    }
+
+    .input {
+      display: flex;
+      margin: 0 auto;
+      justify-content: center;
+
+      input::placeholder {
+        @include fond("Roboto-Light", normal, 300, 14px, 16px);
+        display: flex;
+        align-items: flex-end;
+        color: #999999;
+      }
+
+      input[type="text"] {
+        width: 299px;
+        height: 40px;
+        padding: 14px;
+        background: #ffffff;
+        border: 1px solid #d4d4d4;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.073313);
+        border-radius: 3px;
+        margin-right: 9px;
+      }
+
+      &-button {
+        @include fond("Montserrat-bold", normal, 700, 14px, 17px);
+        width: 172.12px;
+        height: 40px;
+        background: #ff4e50;
+        border-radius: 40px;
+        border: none;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+footer {
+  border-top: 3px solid #ff4e50;
+  margin-bottom: 36px;
+
+  .footer {
+    margin: 36px 17.152vw 0 17.291vw;
+    height: 224px;
+    display: flex;
+
+    &-col_1 {
+      flex: 0 1 244px;
+
+      &-dreamshare {
+        @include fond("Montserrat-Regular", normal, 400, 16px, 20px);
+        display: flex;
+        align-items: flex-end;
+        color: #ff4e50;
+      }
+    }
+
+    &-col_2 {
+      flex: 0 1 239px;
+      margin-top: 2px;
+
+      &-name {
+        @include fond("Montserrat-bold", normal, 700, 14px, 17px);
+        display: flex;
+        align-items: flex-end;
+        color: #444444;
+        margin-bottom: 11px;
+      }
+
+      a {
+        @include fond("Roboto-Light", normal, 300, 14px, 26px);
+        display: block;
+        color: #999999;
+        text-decoration: none;
+      }
+    }
+
+    &-col_3 {
+      flex: 2 1 auto;
+      margin-top: 2px;
+
+      &-name {
+        @extend .footer-col_2-name;
+      }
+    }
+
+    &-col_4 {
+      flex: 0 1 auto;
+      margin-top: 2px;
+
+      p {
+        @include fond("Montserrat-bold", normal, 700, 10px, 12px);
+        @include flexbox(flex, end, flex-end);
+        letter-spacing: 1px;
+        color: #cccccc;
+        margin-bottom: 7px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  footer {
+    margin-bottom: 20px;
+
+    .footer {
+      height: 186px;
+
+      &-col_1 {
+        flex: 0 1 228px;
+      }
+
+      &-col_2 {
+        flex: 0 1 170px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 942px) {
+  .header {
+    &-wrapper {
+      width: 670px;
+
+      margin: 0px 50px 147.5px 48px;
+    }
+  }
+
+  main {
+    width: 100%;
+    margin: 0px 0px 100px;
+
+    section {
+      .carts_header {
+        @include fond("Montserrat-bold", normal, 700, 22px, 27px);
+      }
+
+      .carts {
+        display: grid;
+        grid-template-columns: 236px 236px 236px;
+        grid-template-rows: 400px;
+        gap: 0px 20px;
+        position: relative;
+
+        &-step-header {
+          font-size: 24px;
+          line-height: 14px;
+        }
+
+        &-step_1 {
+          position: relative;
+          width: 236px;
+          height: 400px;
+          overflow: hidden;
+
+          &-img {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+          }
+
+          &-button-1 {
+            position: absolute;
+            left: 20px;
+            top: 205px;
+          }
+
+          &-header {
+            position: absolute;
+            width: 196px;
+            height: 58px;
+            left: 20px;
+            top: 240px;
+          }
+
+          &-text {
+            position: absolute;
+            width: 196px;
+            height: 76px;
+            left: 20px;
+            top: 308px;
+          }
+        }
+
+        &-step_2 {
+          position: relative;
+          width: 236px;
+          height: 400px;
+          overflow: hidden;
+
+          &-img {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+          }
+
+          &-button-2 {
+            position: absolute;
+            left: 20px;
+            top: 255px;
+          }
+
+          &-header {
+            position: absolute;
+            width: 196px;
+            height: 29px;
+            left: 20px;
+            top: 289px;
+          }
+
+          &-text {
+            position: absolute;
+            width: 196px;
+            height: 76px;
+            left: 20px;
+            top: 308px;
+          }
+        }
+
+        &-step_3 {
+          position: relative;
+          width: 236px;
+          height: 400px;
+          overflow: hidden;
+
+          &-img {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+          }
+
+          &-button-3 {
+            position: absolute;
+            left: 20px;
+            top: 205px;
+          }
+
+          &-header {
+            position: absolute;
+            width: 196px;
+            height: 58px;
+            left: 20px;
+            top: 240px;
+          }
+
+          &-text {
+            position: absolute;
+            width: 196px;
+            height: 76px;
+            left: 20px;
+            top: 308px;
+          }
+        }
+      }
+    }
+
+    section {
+      .header-partner {
+        @include fond("Montserrat-bold", normal, 700, 22px, 27px);
+        padding-top: 0;
+        margin: 98px 0 36px;
+      }
+
+      .block {
+        display: grid;
+        grid-template-columns: 236px 236px;
+        grid-template-rows: 224px 224px;
+        gap: 35px 20px;
+        grid-auto-flow: column;
+
+        &-partners {
+          width: 236px;
+          height: 224px;
+          position: relative;
+
+          &-name {
+            width: 236px;
+            height: 18px;
+          }
+
+          &-text {
+            width: 236px;
+            height: 38px;
+          }
+
+          &-text_3 {
+            width: 236px;
+            height: 57px;
+          }
+        }
+      }
+
+      .button-partners {
+        margin: 21px 0 95px;
+      }
+    }
+
+    section {
+      .header-ideas {
+        font-size: 22px;
+        line-height: 27px;
+      }
+
+      .ideas {
+        display: grid;
+        grid-template-columns: 236px 236px 236px;
+        grid-template-rows: 310px 310px 310px;
+        gap: 20px 20px;
+        position: relative;
+
+        &-block {
+          position: relative;
+          width: 236px;
+          height: 310px;
+          overflow: hidden;
+
+          &-text {
+            @include fond("Montserrat-bold", normal, 700, 22px, 27px);
+            display: flex;
+            align-items: flex-end;
+            text-align: center;
+            color: #ffffff;
+          }
+
+          &_sport {
+            &-text {
+              position: absolute;
+              width: 206px;
+              height: 27px;
+              left: 15px;
+              top: 142px;
+            }
+          }
+
+          &_health {
+            &-text {
+              position: absolute;
+              width: 206px;
+              height: 54px;
+              left: 15px;
+              top: 128px;
+            }
+          }
+
+          &_extreme {
+            &-text {
+              position: absolute;
+              width: 206px;
+              height: 54px;
+              left: 15px;
+              top: 128px;
+            }
+          }
+
+          &_games {
+            &-text {
+              position: absolute;
+              width: 206px;
+              height: 27px;
+              left: 80px;
+              top: 142px;
+            }
+          }
+
+          &_culture {
+            width: 492px;
+            height: 310px;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 2;
+
+            &-text {
+              position: absolute;
+              width: 261px;
+              height: 27px;
+              left: 116px;
+              top: 142px;
+            }
+          }
+
+          &_enjomet {
+            width: 492px;
+            height: 310px;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 3;
+            grid-row-end: 3;
+
+            &-text {
+              position: absolute;
+              width: 277px;
+              height: 27px;
+              left: 108px;
+              top: 142px;
+            }
+          }
+
+          &_trevelling {
+            grid-column-start: 3;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: 3;
+
+            &-text {
+              position: absolute;
+              width: 206px;
+              height: 27px;
+              left: 63px;
+              top: 142px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    margin-bottom: 20px;
+
+    .footer {
+      height: 186px;
+      margin: 56px 37px 0 60px;
+
+      &-col_1 {
+        flex: 0 1 227px;
+      }
+
+      &-col_2 {
+        flex: 0 1 170px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    &-wrapper {
+      width: 87.239vw;
+      margin: 0 auto;
+    }
+  }
+
+  main {
+    section {
+      .header-form {
+        font-size: 22px;
+        line-height: 27px;
+        margin-top: 93px;
+      }
+    }
+  }
+
+  footer {
+    margin-bottom: 20px;
+
+    .footer {
+      height: 186px;
+      margin: 36px 37px 0 40px;
+
+      &-col_1 {
+        flex: 0 1 228px;
+      }
+
+      &-col_2 {
+        flex: 0 1 170px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main {
+    section {
+      .carts {
+        gap: 0px 10px;
+      }
+    }
+
+    section {
+      .ideas {
+        gap: 10px 5px;
+
+        &-block {
+          &_culture {
+            width: 477px;
+          }
+
+          &_enjomet {
+            width: 477px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 727px) {
+  main {
+    width: 100%;
+    margin: 40px 0px 40px;
+
+    section {
+      display: flex;
+      align-items: center;
+
+      .carts_header {
+        @include fond("Montserrat-bold", normal, 700, 22px, 27px);
+        width: 289px;
+        height: 27px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        text-align: center;
+        color: #444444;
+        padding: 20px 0 15px;
+      }
+
+      .carts {
+        display: grid;
+        grid-template-columns: 236px;
+        grid-template-rows: 400px;
+        gap: 10px 10px;
+        position: relative;
+      }
+    }
+
+    section {
+      .header-ideas {
+        width: 280px;
+        height: 54px;
+        margin-bottom: 33px;
+      }
+
+      .ideas {
+        display: grid;
+        grid-template-columns: 236px;
+        grid-template-rows: 310px;
+        gap: 10px 10px;
+        position: relative;
+
+        &-block {
+          position: relative;
+          width: 236px;
+          height: 310px;
+          overflow: hidden;
+          display: flex;
+
+          &_culture {
+            grid-column-start: 1;
+            grid-column-end: 1;
+            grid-row-start: 5;
+            grid-row-end: 5;
+
+            &-text {
+              position: absolute;
+              width: 206px;
+              height: 54px;
+              left: 15px;
+              top: 128px;
+            }
+          }
+
+          &_enjomet {
+            grid-column-start: 1;
+            grid-column-end: 1;
+            grid-row-start: 6;
+            grid-row-end: 6;
+
+            &-text {
+              position: absolute;
+              width: 206px;
+              height: 54px;
+              left: 15px;
+              top: 128px;
+            }
+          }
+
+          &_trevelling {
+            grid-column-start: 1;
+            grid-column-end: 1;
+            grid-row-start: 7;
+            grid-row-end: 7;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 491px) {
+  .header {
+    &-center {
+      &-topic {
+        width: 330px;
+        height: 74px;
+        font-size: 35px;
+        line-height: 37px;
+      }
+
+      &-text {
+        font-size: 22px;
+      }
+    }
+  }
+
+  main {
+    section {
+      .header-partner {
+        padding: 0;
+        margin: 36px 0px 14px;
+        width: 280px;
+        height: 54px;
+      }
+
+      .block {
+        display: grid;
+        grid-template-columns: 236px;
+        grid-template-rows: 224px 224px 224px 224px;
+        gap: 16px 0px;
+        grid-auto-flow: column;
+        position: relative;
+
+        &-partners {
+          width: 221px;
+          position: relative;
+        }
+      }
+
+      .button-partners {
+        width: 280px;
+        height: 40px;
+        margin: 36px 0 35px;
+        position: relative;
+      }
+    }
+
+    section {
+      .header-form {
+        width: 280px;
+        height: 54px;
+        margin: 35px auto 9px;
+      }
+
+      .header-form {
+        margin-bottom: 15px;
+      }
+
+      .input {
+        flex-wrap: wrap;
+
+        input[type="text"] {
+          width: 280px;
+          margin: 0 auto 10px;
+        }
+
+        &-button {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  footer {
+    margin-bottom: 22px;
+
+    .footer {
+      flex-flow: column nowrap;
+      margin-top: 19px;
+
+      &-col_1 {
+        flex: 0 1 auto;
+        margin: 0 auto;
+
+        h3 {
+          text-align: center;
+        }
+      }
+
+      &-col_2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column wrap;
+        flex: 0 1 auto;
+
+        &-name {
+          margin: 13px auto 1px;
+        }
+
+        &-wrap {
+          height: 52px;
+          display: flex;
+          justify-content: center;
+          flex-flow: row wrap;
+          text-align: justify;
+          gap: 4px 11px;
+
+          &-menu a {
+            text-align: center;
+          }
+        }
+      }
+
+      &-col_3 {
+        flex: 0 1 auto;
+        margin: 0 auto;
+
+        &-name {
+          margin-top: 6px;
+          width: 64px;
+          height: 17px;
+        }
+      }
+
+      &-col_4 {
+        flex: 0 1 auto;
+        margin: 0;
+
+        p {
+          width: 95px;
+          height: 12px;
+          margin: 14px auto 7px;
+        }
+
+        img {
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header {
+    width: 320px;
+    height: 540px;
+    margin: 0px 0px 12px 0px;
+    padding: 20px 0px 0px;
+
+    &-wrapper {
+      height: 158px;
+      width: 157px;
+      flex-direction: column-reverse;
+      display: flex;
+      margin: 0px auto;
+
+      &-button {
+        width: 153px;
+        height: 36px;
+      }
+
+      &-dreamshare {
+        width: 152px;
+        height: 24px;
+      }
+    }
+
+    &-center {
+      width: 280px;
+      height: 183.5px;
+      margin: 26.5px auto 0;
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+
+      &-topic {
+        width: 285px;
+        height: 74px;
+        font-size: 30px;
+      }
+
+      &-text {
+        font-size: 18px;
+        margin: 0;
+      }
+
+      &-button {
+        margin-top: 15px;
+        padding: 12px 46.5px 11px 46.5px;
+      }
+    }
+  }
+
+  main {
+    width: 320px;
+    margin: 40px 0px 40px;
+
+    section {
+      display: flex;
+      align-items: center;
+
+      .carts_header {
+        @include fond("Montserrat-bold", normal, 700, 22px, 27px);
+        width: 289px;
+        height: 27px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        text-align: center;
+        color: #444444;
+        padding: 20px 0 15px;
+      }
+
+      .carts {
+        display: grid;
+        grid-template-columns: 300px;
+        grid-template-rows: 240px;
+        gap: 10px 10px;
+        position: relative;
+
+        &-step_1 {
+          position: relative;
+          width: 300px;
+          height: 240px;
+          overflow: hidden;
+
+          &-button-1 {
+            position: absolute;
+            left: 20px;
+            top: 64px;
+          }
+
+          &-header {
+            position: absolute;
+            width: 250px;
+            height: 58px;
+            left: 20px;
+            top: 99px;
+          }
+
+          &-text {
+            position: absolute;
+            width: 250px;
+            height: 57px;
+            left: 20px;
+            top: 167px;
+          }
+        }
+
+        &-step_2 {
+          position: relative;
+          width: 300px;
+          height: 240px;
+
+          &-button-2 {
+            position: absolute;
+            left: 20px;
+            top: 95px;
+          }
+
+          &-header {
+            position: absolute;
+            width: 250px;
+            height: 29px;
+            left: 20px;
+            top: 129px;
+          }
+
+          &-text {
+            position: absolute;
+            width: 250px;
+            height: 57px;
+            left: 20px;
+            top: 167px;
+          }
+        }
+
+        &-step_3 {
+          position: relative;
+          width: 300px;
+          height: 240px;
+          overflow: hidden;
+
+          &-button-3 {
+            position: absolute;
+            left: 20px;
+            top: 64px;
+          }
+
+          &-header {
+            position: absolute;
+            width: 250px;
+            height: 58px;
+            left: 20px;
+            top: 99px;
+          }
+
+          &-text {
+            position: absolute;
+            width: 250px;
+            height: 57px;
+            left: 20px;
+            top: 167px;
+          }
+        }
+      }
+    }
+
+    section {
+      .header-ideas {
+        width: 280px;
+        height: 54px;
+        margin-bottom: 33px;
+      }
+
+      .ideas {
+        display: grid;
+        grid-template-columns: 300px;
+        grid-template-rows: 120px;
+        gap: 10px 10px;
+        position: relative;
+
+        &-block {
+          position: relative;
+          width: 300px;
+          height: 120px;
+          overflow: hidden;
+
+          &_sport {
+            &-text {
+              position: absolute;
+
+              left: 47px;
+              top: 47px;
+            }
+          }
+
+          &_health {
+            &-text {
+              position: absolute;
+              left: 47px;
+              top: 33px;
+            }
+          }
+
+          &_extreme {
+            &-text {
+              position: absolute;
+              left: 47px;
+              top: 33px;
+            }
+          }
+
+          &_games {
+            &-text {
+              display: block;
+              left: 47px;
+              top: 47px;
+            }
+          }
+
+          &_culture {
+            grid-column-start: 1;
+            grid-column-end: 1;
+            grid-row-start: 5;
+            grid-row-end: 5;
+
+            &-text {
+              position: absolute;
+              width: 261px;
+              height: 27px;
+              left: 20px;
+              top: 47px;
+            }
+          }
+
+          &_enjomet {
+            grid-column-start: 1;
+            grid-column-end: 1;
+            grid-row-start: 6;
+            grid-row-end: 6;
+
+            &-text {
+              position: absolute;
+              width: 277px;
+              height: 27px;
+              left: 12px;
+              top: 47px;
+            }
+          }
+
+          &_trevelling {
+            grid-column-start: 1;
+            grid-column-end: 1;
+            grid-row-start: 7;
+            grid-row-end: 7;
+
+            &-text {
+              display: block;
+              left: 47px;
+              top: 47px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
